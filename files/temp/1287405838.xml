@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container type='BitPanel'>
+    <attribute>
+        <layout type='BorderLayout'>
+        </layout>
+        <style>
+            <background color='#000'>
+            </background>
+            <size width='980' height='1100'>
+            </size>
+            <padding value='0px 0px 0px 0px'>
+            </padding>
+        </style>
+    </attribute>
+    <contains>
+        <container type=' BitPanel' direction='NORTH'>
+            <attribute>
+                <layout type='FlowLayout'>
+                </layout>
+                <style>
+                    <background color='#8f8f8f'>
+                    </background>
+                    <size width='980' height='175'>
+                    </size>
+                    <padding value='0px 0px 0px 0px'>
+                    </padding>
+                </style>
+            </attribute>
+        </container>
+        <container type=' BitPanel' direction='CENTER'>
+            <attribute>
+                <layout type='GridLayout' rows='1' cols='2'>
+                </layout>
+                <style>
+                    <background color='#e4e4e4'>
+                    </background>
+                    <size width='980' height='800'>
+                    </size>
+                    <padding value='0px 0px 0px 0px'>
+                    </padding>
+                </style>
+            </attribute>
+            <contains>
+                <container type=' BitPanel'>
+                    <attribute>
+                        <layout type='FlowLayout'>
+                        </layout>
+                        <style>
+                            <background color='#d3d3d3'>
+                            </background>
+                            <size width='490' height='800'>
+                            </size>
+                            <padding value='0px 0px 0px 0px'>
+                            </padding>
+                        </style>
+                    </attribute>
+                </container>
+                <container type=' BitPanel'>
+                    <attribute>
+                        <layout type='FlowLayout'>
+                        </layout>
+                        <style>
+                            <background color='#aaa'>
+                            </background>
+                            <size width='490' height='800'>
+                            </size>
+                            <padding value='0px 0px 0px 0px'>
+                            </padding>
+                        </style>
+                    </attribute>
+                </container>
+            </contains>
+        </container>
+        <container type=' BitPanel' direction='SOUTH'>
+            <attribute>
+                <layout type='FlowLayout'>
+                </layout>
+                <style>
+                    <background color='#8f8f8f'>
+                    </background>
+                    <size width='980' height='125'>
+                    </size>
+                    <padding value='0px 0px 0px 0px'>
+                    </padding>
+                </style>
+            </attribute>
+        </container>
+    </contains>
+</container>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<container type="frame" css="xml_frame2" title="XML TestFrame 2" id="$id1">
+    <attribute>
+        <dimension width="500" height="200" />
+        <position left="250" top="250" />
+    </attribute>
+    <contains>
+        <xmlfile src="xml/file2_subfile2.xml" />
+    </contains>
+</container>

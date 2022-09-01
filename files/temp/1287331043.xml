@@ -1,0 +1,58 @@
+<container type=' BitPanel'>
+	<attribute>
+		<layout type='BorderLayout'>
+		</layout>
+		<style>
+			<background color='#000'>
+			</background>
+			<size width='980' height='1000'>
+			</size>
+			<padding value='0px 0px 0px 0px'>
+			</padding>
+		</style>
+	</attribute>
+	<contains>
+		<container type=' BitPanel' direction='WEST'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<style>
+					<background color='#8f8f8f'>
+					</background>
+					<size width='175' height='900'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+		</container>
+		<container type=' BitPanel' direction='CENTER'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<style>
+					<background color='#e4e4e4'>
+					</background>
+					<size width='805' height='900'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+		</container>
+		<container type=' BitPanel' direction='SOUTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<style>
+					<background color='#f00'>
+					</background>
+					<size width='980' height='100'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+		</container>
+	</contains>
+</container>

@@ -1,0 +1,113 @@
+<container type=' BitPanel'>
+	<attribute>
+		<layout type='BorderLayout'>
+		</layout>
+		<background color='#000'>
+		</background>
+		<dimension width='980' height='1100'>
+		</dimension>
+	</attribute>
+	<contains>
+		<container type=' BitPanel' direction='NORTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<background color='#8f8f8f'>
+				</background>
+				<dimension width='980' height='175'>
+				</dimension>
+			</attribute>
+		</container>
+		<container type=' BitPanel' direction='CENTER'>
+			<attribute>
+				<layout type='BorderLayout'>
+				</layout>
+				<background color='#e4e4e4'>
+				</background>
+				<dimension width='980' height='800'>
+				</dimension>
+			</attribute>
+			<contains>
+				<container type=' BitPanel' direction='WEST'>
+					<attribute>
+						<layout type='GridLayout' rows='3' cols='1'>
+						</layout>
+						<background color='#d3d3d3'>
+						</background>
+						<dimension width='200' height='800'>
+						</dimension>
+					</attribute>
+					<contains>
+						<container type=' BitPanel'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#333'>
+								</background>
+								<dimension width='200' height='267'>
+								</dimension>
+							</attribute>
+						</container>
+						<container type=' BitPanel'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#666'>
+								</background>
+								<dimension width='200' height='267'>
+								</dimension>
+							</attribute>
+						</container>
+						<container type=' BitPanel'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#999'>
+								</background>
+								<dimension width='200' height='266'>
+								</dimension>
+							</attribute>
+						</container>
+					</contains>
+				</container>
+				<container type=' BitPanel' direction='CENTER'>
+					<attribute>
+						<layout type='FlowLayout'>
+						</layout>
+						<background color='#aaa'>
+						</background>
+						<dimension width='780' height='800'>
+						</dimension>
+					</attribute>
+					<content>
+					<p>
+					4
+					</p>
+					<p>
+					3
+					</p>
+					<p>
+					2
+					</p>
+					<p>
+					1
+					</p>
+					<p>
+					5
+					</p>
+					</content>
+				</container>
+			</contains>
+		</container>
+		<container type=' BitPanel' direction='SOUTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<background color='#8f8f8f'>
+				</background>
+				<dimension width='980' height='125'>
+				</dimension>
+			</attribute>
+		</container>
+	</contains>
+</container>

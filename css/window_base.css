@@ -1,0 +1,58 @@
+
+.icon_window {
+    height:25px;
+    width:48px;
+    background:url(../img/window_icon.png) no-repeat top left;
+    display:inline;
+}
+
+.head_window {
+    background:url(../img/window_headbar.png);
+    color:#fff;
+    padding:0 4px 0 0;
+}
+
+.window_title_text {
+    line-height:1.4em;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.window_title_outer, 
+.window_title_inner>span,
+.window_title_inner  {
+    height:25px !important;
+}
+
+.foot_window {
+    background:url(../img/window_footer.png);
+}
+
+/*
+* Fensterahmen
+*/
+.top_left_border { background:url("../img/border_top_left.png"); }            
+.top_right_border { background:url("../img/border_top_right.png"); }
+            
+.bottom_left_border {background:url("../img/border_bottom_left.png"); }
+.bottom_right_border {background:url("../img/border_bottom_right.png");}
+            
+.vertical_border {background:url("../img/border_vertical.png"); }
+.horizontal_border {background:url("../img/border_horizontal.png"); }
+
+/* Splitlayer
+========================================================*/
+.split_vertical {
+    background:url(../img/split_vertical.png) #ababab no-repeat center center; 
+}
+
+.split_horizontal {
+    background:url(../img/split_horizontal.png) #ababab no-repeat center center; 
+}
+
+/* Confirm Fenster
+========================================================*/
+.confirm_body {
+    padding:5px;
+}
+

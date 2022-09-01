@@ -1,0 +1,100 @@
+<container type=' BitPanel'>
+	<attribute>
+		<layout type='BorderLayout'>
+		</layout>
+		<background color='#fff'>
+		</background>
+		<dimension width='940' height='1100'>
+		</dimension>
+	</attribute>
+	<contains>
+		<container type=' BitPanel' direction='NORTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<background color='#3D3D3D'>
+				</background>
+				<dimension width='940' height='225'>
+				</dimension>
+			</attribute>
+			<content>
+				<img src='http://creatability.com/rw_common/images/Creatability-Website-banner-V5.png'>
+				</img>
+			</content>
+		</container>
+		<container type=' BitPanel' direction='CENTER'>
+			<attribute>
+				<layout type='BorderLayout' hgap='1' vgap='1'>
+				</layout>
+				<background color='#ddd'>
+				</background>
+				<dimension width='940' height='875'>
+				</dimension>
+			</attribute>
+			<contains>
+				<container type=' BitPanel' direction='WEST'>
+					<attribute>
+						<layout type='FlowLayout'>
+						</layout>
+						<background color='#3D3D3D'>
+						</background>
+						<dimension width='200' height='875'>
+						</dimension>
+					</attribute>
+				</container>
+				<container type=' BitPanel' direction='CENTER'>
+					<attribute>
+						<layout type='BorderLayout'>
+						</layout>
+						<background color='#3D3D3D'>
+						</background>
+						<dimension width='739' height='875'>
+						</dimension>
+					</attribute>
+					<contains>
+						<container type=' BitPanel' direction='NORTH'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#cda207'>
+								</background>
+								<dimension width='739' height='150'>
+								</dimension>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='SOUTH'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#cda207'>
+								</background>
+								<dimension width='739' height='150'>
+								</dimension>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='EAST'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#cda207'>
+								</background>
+								<dimension width='150' height='575'>
+								</dimension>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='CENTER'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<background color='#999'>
+								</background>
+								<dimension width='589' height='575'>
+								</dimension>
+							</attribute>
+						</container>
+					</contains>
+				</container>
+			</contains>
+		</container>
+	</contains>
+</container>

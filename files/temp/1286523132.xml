@@ -1,0 +1,215 @@
+<container type=' BitPanel'>
+	<attribute>
+		<layout type='BorderLayout'>
+		</layout>
+		<style>
+			<background color='#000'>
+			</background>
+			<size width='980' height='1100'>
+			</size>
+			<padding value='0px 0px 0px 0px'>
+			</padding>
+		</style>
+	</attribute>
+	<contains>
+		<container type=' BitPanel' direction='NORTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<style>
+					<background color='#8f8f8f'>
+					</background>
+					<size width='980' height='175'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+			<content>
+				<img src='http://127.0.0.1/BitEdit/files/bilder/banner.jpg'>
+				</img>
+			</content>
+		</container>
+		<container type=' BitPanel' direction='CENTER'>
+			<attribute>
+				<layout type='BorderLayout'>
+				</layout>
+				<style>
+					<background color='#e4e4e4'>
+					</background>
+					<size width='980' height='800'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+			<contains>
+				<container type=' BitPanel' direction='WEST'>
+					<attribute>
+						<layout type='GridLayout' rows='3' cols='1'>
+						</layout>
+						<style>
+							<background color='#ffffff'>
+							</background>
+							<size width='200' height='800'>
+							</size>
+							<padding value='5px 0px 5px 0px'>
+							</padding>
+						</style>
+					</attribute>
+					<contains>
+						<container type=' BitPanel'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#333'>
+									</background>
+									<size width='200' height='264'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+						<container type=' BitPanel'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#666'>
+									</background>
+									<size width='200' height='263'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+						<container type=' BitPanel'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#999'>
+									</background>
+									<size width='200' height='263'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+					</contains>
+				</container>
+				<container type=' BitPanel' direction='CENTER'>
+					<attribute>
+						<layout type='BorderLayout' hgap='1' vgap='1'>
+						</layout>
+						<style>
+							<background color='#ffffff'>
+							</background>
+							<size width='780' height='800'>
+							</size>
+							<padding value='5px 0px 5px 5px'>
+							</padding>
+						</style>
+					</attribute>
+					<contains>
+						<container type=' BitPanel' direction='NORTH'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#cda207'>
+									</background>
+									<size width='775' height='150'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='SOUTH'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#cda207'>
+									</background>
+									<size width='775' height='150'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='WEST'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#cda207'>
+									</background>
+									<size width='150' height='488'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='EAST'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#cda207'>
+									</background>
+									<size width='150' height='488'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+						</container>
+						<container type=' BitPanel' direction='CENTER'>
+							<attribute>
+								<layout type='FlowLayout'>
+								</layout>
+								<style>
+									<background color='#999'>
+									</background>
+									<size width='473' height='488'>
+									</size>
+									<padding value='0px 0px 0px 0px'>
+									</padding>
+								</style>
+							</attribute>
+							<content>
+								<img src='http://127.0.0.1/BitEdit/files/bilder/bild1.jpg'>
+								</img>
+							<p>
+							ich bin der König von Mallorca olelelelelele
+							</p>
+							</content>
+						</container>
+					</contains>
+				</container>
+			</contains>
+		</container>
+		<container type=' BitPanel' direction='SOUTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<style>
+					<background color='#8f8f8f'>
+					</background>
+					<size width='980' height='125'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+		</container>
+	</contains>
+</container>

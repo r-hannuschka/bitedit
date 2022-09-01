@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<container type="splitpanel" css="splitpanel">
+    <attribute>
+        <background color="#d3d3d3" />
+        <dimension width="800px" height="800px" />
+    </attribute>
+    <contains>
+        <container type="panel" direction="left" css="left_container">
+            <attribute>
+                <background color="#2b3ad3" />  
+            </attribute>
+        </container>
+        <xmlfile src="xml/file2_subfile2.xml" direction="right" />
+    </contains>
+</container>

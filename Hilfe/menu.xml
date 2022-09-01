@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<root>
+    <folder name="Grundlagen">        
+        <file name="ueber Bitedit" />        
+        <folder name="Aufbau">            
+            <file name="Navigator" />            
+            <folder name="Dateiübersicht" >
+                <file name="Vorlagen" /> 
+                <file name="Bilder" />                
+            </folder>            
+            <file name="Hauptansicht" />            
+            <folder name="Ebenenübersicht">                
+                <file name="Ebene umbenennen" />
+                <file name="Ebene löschen" />
+            </folder>            
+        </folder>        
+    </folder>        
+    <folder name="Werkzeuge">        
+        <folder name="Ebenen Editor">
+            <file name="Layout ändern" />
+            <file name="Größen ändern" />
+            <file name="HGap / VGap" />
+            <file name="Abstand innen" />
+        </folder>        
+        <folder name="peter">
+            <file name="dieter" />
+            <folder name="klaus">
+                <file name="HansWerner1" />
+                <file name="HansWerner2" />
+                <file name="HansWerner3" />
+            </folder>
+        </folder>
+        <file name="Farben" />        
+        <folder name="Bild Editor"></folder>        
+        <file name="Texteditor" />        
+    </folder>
+    <folder name="Tutorials">        
+        <file name="Schritt1" />
+        <file name="Schritt2" />
+        <file name="Schritt3" />
+        <file name="Schritt4" />
+        <file name="Schritt5" />
+        <file name="Schritt6" />        
+    </folder>    
+</root>

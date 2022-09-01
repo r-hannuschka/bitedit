@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<container type="panel">
+    <attribute>
+        <layout type="BorderLayout"  />        
+        <dimension width="400" height="200" >            
+            <min_size width="150" height="150" />
+            <max_size width="450" height="350" />            
+        </dimension>        
+        <position left="200" top="200" />        
+    </attribute>    
+    <contains>    
+    </contains>
+</container>

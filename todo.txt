@@ -1,0 +1,224 @@
+*************************************************************************
+*                            COOLE BANDS                                *
+*                       gehört auf H4xed Metal                          *
+*************************************************************************
+- Svartsot ( cooles Viking Grunzmetal )
+
+*************************************************************************
+*                          TODO / FEHLER LISTE                          *
+*************************************************************************
+
+** Ebenen Editor **
+ 
++ BorderLayout Editor : 
+    wenn Änderungen vorgenommen wurden und dann ein 2. mal gleich auf speichern gedrückt wurde
+    dann wird alles leer geräumt und neu belegt.
+    Fehler trat auch dann auf wenn keine Änderungen vorgenommen wurden.
+    
+    -- FIX --
+    AbstractLayoutEditor.js 
+    ~dLayer (Dummy Layer) wurde nicht gelöscht 
+    ~modifications wurden nicht gelöscht 
+    
+    AbstractLayoutEditor.clearModifications() 
+    muss momentan von allen Kindklassen aufgerufen werden eher suboptimal
+    
+    somit kam es zu wiederholten Änderungen bzw Löschungen
+
++ Ebenen Baum Folder wird angelegt obwohl es bereits eine Verzeichniss war
+  passiert dann wenn ein Verzeichniss ein neues Layout zugewiesen bekommt
+ 
+    -- FIX --
+    LayerOverview.class.js -> buildLayerOverview()
+    
+    UL Knoten wurde nicht im Objekt des Layers <TreeObject> gespeichert 
+    TreeObject.listNode somit wurde das Verzeichniss nicht erkannt
+    
++ wenn die Ebene bereits ein BorderLayout hat wird dennoch ein neues BorderLayout
+  angelegt sobald man auf den Button klickt. Ebenefalls Gridlayout und FlowLayout.
+  
+    -- FIX --
+    LayerEditorView.class.js -> changeLayout
+    
+    es wurde nicht geprüft ob das aktuelle Layout dem gewählten Layout entspricht
+    
++ sobald ein Layout Switch stattfindet wird das erste gewählte Layout automatisch überschrieben
+
+  1. BorderLayout -> aktuell 
+  2. Gridlayout   -> dummy wird angelegt und neues Layout 
+  3. BorderLayout -> neuer Dummy , alter Layer wird nicht gewählt   
+
+  -- FIX --
+  LayerEditorView.class.js
+  
++ wenn das Layout geändert aber nicht gespeichert wird und dann zum anderen Layout gewechselt wird   
+  trat ein Fehler auf das der Knoten nicht mehr existierte
+  
+    -- FIX --
+    LayerEditorView.class.js
+  
+    Die aktuell zu bearbeitende Ebene wurde in Layer abgespeichert welche dann aus dem Baum gelöscht wurde
+    sofern die Ebene schon das Layout von Grundauf besessen hatte.
+ 
++ Gridlayout Editor fehlerhaft , wenn schon eine Ebene eingefügt wurde
+  und danach das Gridlayout erweitert wird, werden in der Original Fläche
+  nicht genügend Ebenen eingefügt.
+ 
+    -- FIX --
+    GridlayoutEditor.js
+    
+    sobald Reihen oder Spalten hinzugefügt wurden wurde updatePanels aufgerufen 
+    dort wurde das panels Array geclont und in oldPanels gespeichert. 
+ 
++ Sollte die Anzahl der Felder im Grid zurück gesetzt werden , werden diese Flächen 
+  nicht Ordnungsgemäß gelöscht in der LayerOverview.
+
+    -- FIX --
+    GridlayoutEditor.js
+
++ sollte die Ebene bereits ein Gridlayout gewesen sein dann können bereits
+  existierende Ebenen nicht gelöscht werden
+
+    -- FIX --
+    GridLayoutEditorView.js
+
+  die Variable panelsSet machte es abhängig ob Flächen hinzugefügt oder gelöscht worden
+  und zählte mit ohne die bereits existierenden Flächen zu betrachten
+
++ angenommen das Gridlayout hat die Struktur 2 x 3 also 6 Flächen
+  dann wird umgestellt auf 1 x 3 = 3 Flächen dann behält das Layer Model
+  dennoch 6 Kinder und wird nicht auf 3 zurück gesetzt
+
+    -- FIX --
+    GridLayoutEditor.js
+
+  richtig erkannt wurde das die Ebene modifiziert wurde und mehr Flächen eingebettet
+  waren als rein passten. Aber diese Flächen wurden nicht aus dem Panel Objekt gelöscht
+  somit existierten die Flächen noch weiter hin und waren somit Kinder vom Panel.
+
++ sobald ein Editor 2 mal in Folge angewählt wird, wird der aktuelle Editor zurück gesetzt
+
+    -- FIX --
+    LayerEditorView.class.js
+
+    Variable angelegt selectedLayerEditor welche den Namen des gewählten Editors speichert
+    sollte dieser gleich des aktuell gewählten Layout Editors sein tut er nun nix weiter
+
++ sollte eine Fläche mit einen Layout versehen sein und all seine Kindelemente gelöscht werden 
+  über die Ebenen Ansicht.
+  Dann kommt es zu einen Fehler im LayerEditor beim speichern wenn man die Flächen neu hinzufügt
+  oder ein komplett anderes Layout wählt
+
+   -- FIX --
+   Hauptproblem war denk ich das die Ebene in der LayerOverview , bzw das LayerObjekt nicht korrekt 
+   entfernt wurde und somit die Ebene immer als Verzeichniss galt wenn sie einmal ein Verzeichniss war.
+   Weitere Probleme waren dann noch in der Template.class zu finden
+
+   genau kann ich es nicht mehr sagen klappt nun aber
+
++ wenn eine Ebene modifiziert wurde und dann ein neues Template geladen wird
+  wird ein Baum Knoten nicht gefunden.
+
+  -- FIX --
+  hat sich mit nen anderen Problem mit erledigt
+
++ wenn die Ebene ein Layout hat wie ein GridLayout oder Borderlayout aber keine Flächen
+  und dann ein Bild abgespeichert wird , gilt es im Editor als Fläche obwohl es keine ist
+  und somit kommt es zu Fehlern.
+
++ Fehler behoben das im Editor die Flächen nicht korrekt aus dem Baum gelöscht
+  worden sind
+
+- sollte das selbe Layout mehrmals geändert werden (ohne Ebene zu wechseln ?) und gespeichert
+  dann kommt es zu einen Fehler.
+
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~                 Nice to have                ~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        - beim Speichern eines Layouts kommt das Hinweis Fenster auch wenn sich gar nichts
+          geändert hat bzw die Änderungen die Ebene nur erweiteren und nicht direkt andere
+          Flächen verändern.
+
+** LayerOverview **
+
++ wenn eine Fläche gelöscht wird in der Ebenen Übersicht dann wird der Ebenen Baum
+  nicht korrekt aktualisiert obwohl die Flächen im Navigator und Template korrekt
+  entfernt werden
+
+    -- FIX --
+
++ sofern ein Bild in einer Fläche gedroppt wurde , danach die Fläche über den Ebenen Editor bearbeitet wird
+  und darauf hin gespeichert , wird das Bild nicht ordnungsgemäß gelöscht.
+
+    -- FIX --
+    DocumentView.class.js
+  
+    Blätter wurden nicht korrekt aus dem Template entfernt bei einen updateView.
+
+** Drag Drop **
++ nachdem neue Ebenen eingefügt worden sind , sind Drag Operationen noch
+  fehlerhaft , neue Ebenen gelten nicht als DragDrop Container
+
+    -- FIX --
+    Template.class.js
+
+    neue Container wurden hinzugefügt aber der alte hatte die Oberhand da die Container
+    in der DragDrop Klasse keine Baumstruktur bilden somit war der Elterncontainer
+    der Drop Container
+
++ Nachdem Flächen gelöscht worden sind , ist die Ursprungsfläche nicht für DragDrop
+  verfügbar
+
+- sollte nicht klar ausgemacht werden können wo die Komponente abgelegt wurde ,
+  bzw die Komponente sich in keinen Drop Container befindet dann Fehler
+
+** Bild Editor **
+
+ + implementieren
+
+ - Bug , es wird nicht korrekt resettet die Bildeigenschaften vom alten Bild
+      werden auf das neue Bild übertragen sofern keine Änderung stattfand
+
+ + Bildgrößen stimmen nach dem Text editieren nicht mehr
+
+/**
+ * TODO
+ */
+
++ Ebenen löschen und hinzufügen komplett in das Template Model verlagern , momentan
+  findet es noch zusätzlich im Ebenen Editor statt ist nicht so optimal
+
++ Ebenen Editor
+
+    + Ebenen Eigenschaften einbinden
+
+        + Größe für Flächen ändern / + anzeigen
+        + Padding für Flächen einstellen / + anzeigen
+        + Margin für Flächen einstellen /  + anzeigen
+
+    + Bug wenn eine Fläche kein Layout besessen hat , werden die Ebenen Eigenschaften
+      nicht übernommen
+
+    - nach import werden padding Eigenschaften nicht korrekt in den Ebenen Editor übernommen
+     
++ Texteditor Spaw Edit einbinden und testen
+
+    für Tiny MCE entschieden aber BUG in Webkit Browsern.
+
++ skalieren von Flächen einbinden
+
+- Export 
+
+    - Export Fenster ausbauen mit Namens Eingabe etc.
+    - Export einbinden als XML Ausgabe , URL Ausgabe oder HTML Ausgabe
+    - CSS Eigenschaften von Bildern und Texten übernehmen im Export
+
+- LayerOverview neu strukturieren mit Strategy Pattern
+  momentan ist es einfach zu unübersichtlich geworden
+
+// sehr viel Später
+- DragDrop Container als Baumstruktur darstellen damit die Fläche gefunden werden kann
+  wo ein Element abgelegt werden kann. Aber eher neue Drag Drop Klasse
+
+- Color Picker dringend überarbeiten is so momentan echt mist da immer ein komplett neues
+  Fenster angelegt wird

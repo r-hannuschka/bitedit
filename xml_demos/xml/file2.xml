@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<container type="BitPanel" >
+    <attribute>
+        <dimension width="400" height="200" />
+    </attribute>
+    <contains>
+        <xmlfile src="xml/file2_subfile.xml" />
+    </contains>
+</container>

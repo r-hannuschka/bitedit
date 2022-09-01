@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<container type="panel">
+    <attribute>
+        <layout type="GridLayout" rows="3" cols="1" hgap="2" vgap="2" />
+        <dimension width="980" height="1000" >
+            <min_size width="150" height="150" />
+            <max_size width="450" height="350" />
+        </dimension>
+        <background color="#000" />
+    </attribute>
+    <contains>
+        <container type="panel">
+            <attribute>
+                <background color="#d3d3d3" />
+            </attribute>   
+        </container>
+        <container type="panel">
+            <attribute>
+                <background color="#d3d3d3" />
+                <layout type="BorderLayout" hgap="2" vgap="2" />
+                <style>
+                    <size width="100" height="100" />
+                    <font size="11px" family="Areal" line_height="20px" />
+                    <background color="#dedede" />
+                    <padding value="4px 5px 3px 5px" />
+                </style>
+            </attribute>
+            <contains>
+                <container type="panel" direction="east">
+                    <attribute>
+                        <dimension width="150" height="20" />
+                        <background color="#3d3d3d" />
+                    </attribute>
+                </container>
+                <container type="panel" direction="center">
+                    <attribute>
+                        <background color="#3d3d3d" />
+                    </attribute>
+                </container>
+            </contains>
+        </container>
+        <container type="panel">
+            <attribute>
+                <background color="#d3d3d3" />
+            </attribute>     
+        </container>
+    </contains>
+</container>

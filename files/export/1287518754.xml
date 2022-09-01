@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container type=' BitPanel'>
+	<attribute>
+		<layout type='BorderLayout'>
+		</layout>
+		<style>
+			<background color='#fff'>
+			</background>
+			<size width='940' height='1100'>
+			</size>
+			<padding value='0px 0px 0px 0px'>
+			</padding>
+		</style>
+	</attribute>
+	<contains>
+		<container type=' BitPanel' direction='NORTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<style>
+					<background color='#3D3D3D'>
+					</background>
+					<size width='940' height='225'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+			<content type='image'>
+				<img src='http://creatability.com/rw_common/images/Creatability-Website-banner-V5.png'>
+					<style>
+						<size>
+						</size>
+						<padding value='0px 0px 0px 0px'>
+						</padding>
+						<margin value='0px 0px 0px 0px'>
+						</margin>
+					</style>
+				</img>
+			</content>
+		</container>
+		<container type=' BitPanel' direction='CENTER'>
+			<attribute>
+				<layout type='BorderLayout' hgap='1' vgap='1'>
+				</layout>
+				<style>
+					<background color='#ddd'>
+					</background>
+					<size width='940' height='875'>
+					</size>
+					<padding value='0px 0px 0px 0px'>
+					</padding>
+				</style>
+			</attribute>
+			<contains>
+				<container type=' BitPanel' direction='WEST'>
+					<attribute>
+						<layout type='FlowLayout'>
+						</layout>
+						<style>
+							<background color='#3D3D3D'>
+							</background>
+							<size width='200' height='875'>
+							</size>
+							<padding value='0px 0px 0px 0px'>
+							</padding>
+						</style>
+					</attribute>
+				</container>
+				<container type=' BitPanel' direction='CENTER'>
+					<attribute>
+						<layout type='FlowLayout'>
+						</layout>
+						<style>
+							<background color='#3D3D3D'>
+							</background>
+							<size width='739' height='875'>
+							</size>
+							<padding value='0px 0px 0px 0px'>
+							</padding>
+						</style>
+					</attribute>
+					<content type='image'>
+						<img src='http://www.afairjudgement.com/wp-content/uploads/2007/10/permafrost.jpg'>
+							<style>
+								<size width='550' height='413'>
+								</size>
+								<padding value='0px 0px 0px 0px'>
+								</padding>
+								<margin value='0px 0px 0px 0px'>
+								</margin>
+							</style>
+						</img>
+					</content>
+				</container>
+			</contains>
+		</container>
+	</contains>
+</container>

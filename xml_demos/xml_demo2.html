@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <head>
+        <link rel="stylesheet" type="text/css" href="../window_base.css"></link>
+        <style type="text/css">
+            * {
+                margin:0px;
+                padding:0px;
+            }
+            
+            html , body {
+                height:100%;
+                width:100%;
+                overflow:hidden;
+            }
+            
+            .xml_frame {
+                background:#fff;
+            }
+            
+            .xml_frame2 {
+                background:#fff;
+            }
+
+            .icon_frame .head_window{
+            }
+
+        </style>
+        <title>Bit Tabbed Panel</title>    
+        <script type="text/javascript" src="../js/Element.class.js"></script>
+        <script type="text/javascript" src="../js/Slider.class.js"></script>
+        <script type="text/javascript" src="../js/Scrollbar.class.js"></script>
+        <script type="text/javascript" src="../js/BitGUI.class.js"></script>
+        <script type="text/javascript" src="../js/Load.class.js"></script>
+        <script type="text/javascript">
+
+            (function (){
+                window.Error = new Error();
+
+                function Error(){
+                    var error_log = [];
+
+                    this.log = {
+                        push:function (value){
+                            error_log.push(value);
+                        },
+                        toString:function (){
+                            var sError = "";
+
+                            for(var i = 0 ; i < error_log.length;i++) {
+                                sError += error_log[i]+"\n";
+                            }
+
+                            return sError;
+                        }
+
+                    }
+                }
+            })();
+            
+            DOM.loaded(function (){
+                BitGUI_XMLTemplate('xml/file2.xml',
+                    { 
+                        // Template Variablen ersetzen
+                        id:["peter","lustig","fred"],
+                        css:"mothafuckingcolored"
+                    }
+                );
+            });
+            
+        </script>
+    </head>
+    <body>
+        <p>
+            es wird die xml datei xml/file2.xml gelesen <br />
+            xml/file2.xml bindet file2_subfile.xml ein <br />
+            xml/file2_subfile bindet file2_subfile2.xml ein
+        </p>
+        <p>
+            es wird die xml datei xml/file4.xml von xml/file2.xml geladen 
+            und als Fenster angebunden
+        </p>
+        <p>
+            da noch Probleme mit dem SplitPanel existieren XML TestFrame 2 einfach mal größer ziehen
+            dann sieht man es besser.
+        </p>
+    </body>
+</html>

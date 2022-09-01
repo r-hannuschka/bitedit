@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<container type="BitPanel">
+    <attribute>
+        <layout type="BorderLayout" hgap="0" vgap="0" />
+        <style>
+            <size width="940" height="1100" />
+            <background color="#fff" />
+        </style>
+    </attribute>
+    <contains>
+        <container type="BitPanel" direction="north">
+            <attribute>
+                <style>
+                    <size width="100" height="225" />
+                </style>
+            </attribute>
+            <content>
+                <img src='http://creatability.com/rw_common/images/Creatability-Website-banner-V5.png' />
+            </content>
+        </container>
+        <container type="BitPanel" direction="center" >
+            <attribute>
+                <style>
+                    <layout type="BorderLayout" hgap="1" vgap="1" />
+                    <background color="#ddd" />
+                </style>
+            </attribute>
+            <contains>
+                <container type="BitPanel" direction="west" >
+                    <attribute>
+                        <style>
+                            <size width="200" height="100" />
+                        </style>
+                    </attribute>
+                </container>
+                <container type="BitPanel" direction="center" >
+                    <content>
+                        <h2>Die Wahl steht bevor</h2>
+                        <img src="http://www.afairjudgement.com/wp-content/uploads/2007/10/permafrost.jpg" />
+                        <p>das wird auf jeden Fall ein Knaller</p>
+                    </content>
+                </container>
+            </contains>
+        </container>
+    </contains>
+</container>

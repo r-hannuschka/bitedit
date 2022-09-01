@@ -1,0 +1,388 @@
+/* generelle Einstellungen
+===================================*/
+* {
+    margin:0px;
+    padding:0px;
+}
+            
+html , body {
+    height:100%;
+    width:100%;
+    font-size:12px;
+    font-family:Arial,Verdana,sans-serif;
+}
+
+a {
+    text-decoration:none;
+}
+
+ul {
+    list-style-type:none;
+}
+
+.sprite {
+    background:url(../img/sprite.png) no-repeat;
+}
+
+.clearfix:after {
+    content:".";
+    display:block;
+    clear:both;
+    height:1px;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+/* general
+ */
+.save { background-position:-382px -83px; height:20px; }
+.cancel { background-position:-382px -126px; }
+input { border:1px solid #888; }
+
+/* Start Bildschirm
+==========================================*/
+#startScreen {
+    padding:156px 31px 64px; 
+    color:#4a453a;
+    font-family:Verdana;
+    font-size:11pt;
+}
+
+#startScreen .loadtext{
+    padding:0 0 0 4px;
+}
+ 
+/*
+* Einstellungen Werkzeugleiste 
+*/ 
+.toolframe_content {
+    padding:4px 2px;
+}     
+
+/**
+* Icons in der  Werkzeugleiste
+*/
+.scale_icon { background:url(../img/icons.jpg) -20px 0px }
+.text_icon { background:url(../img/icons.jpg) 0px 0px }
+.colorpicker_icon { background:url(../img/icons.jpg) -40px 0px }
+.colorpicker_text_icon { background:url(../img/icons.jpg) 20px 0px }
+
+.image_edit_icon  { background:url(../img/icons.jpg) -60px 0px }
+.delete { background:url(../img/icons.jpg) -180px 0px }
+
+.lock_icon   { background:url(../img/icons.jpg) -260px 0px; }
+.lock_icon.active   { background:url(../img/icons.jpg) -260px -20px; }
+
+.color_icon { background:url(../img/icons.jpg) -280px 0px; }
+
+.confirm_panel {
+    padding:0 86px;
+}     
+
+/*
+* Projekt Erstellungs Button im Frame
+*/
+.projekt_name_panel {
+    padding:2px 1px;
+}
+
+.create_project {
+    padding:2px 4px;
+    background:url(../img/buttons/create_project_button.png);
+}
+
+.insert_project_name {
+    width:143px;
+    border:1px solid;
+}
+
+/* Color Window
+===================================================*/
+.color_window input {
+    border:0px;
+    width:84px;
+    padding:2px 0 0 0;
+    height:18px;
+}
+            
+.images {
+    background:#fff;
+}
+
+.images  img {
+    margin:0 0 2px;
+}
+                        
+/* Tabpanel Fileauswahl
+===============================================*/
+.tab_pane {
+    background:url(../img/tabs.png) repeat-x 0px -36px;
+    padding:2px 3px 0px;
+    line-height:1.3em;
+    font-size:0.8em;
+    color:#555;
+}
+            
+.tab_outer {
+    float:left;
+    padding:0 8px 0 0;
+    background:url(../img/tabs.png) no-repeat right -74px;
+    height:18px;
+	cursor:pointer;
+	margin:0 0 0 2px;
+}
+            
+.tab_inner {
+    padding:0 0 0 8px;
+    background:url(../img/tabs.png) no-repeat 0px -18px;
+    display:block;
+    height:18px;
+    font-size:11px;
+    font-weight:bold;
+    line-height:18px;
+}
+        
+.tab_outer_active {
+    padding:0 8px 0 0;
+    background:url(../img/tabs.png) no-repeat right -56px;
+    color:#030303;
+	margin:0 0 0 2px;
+}
+            
+.tab_outer_active .tab_inner {
+    display:block;
+    background:url(../img/tabs.png) no-repeat 0px 0px;
+}
+
+.tab_content_pane {
+    background:#d9d9d9;
+}
+
+/* Image Edit Fenster
+===============================================*/
+.image_edit_overview {
+    padding:3px;
+    background:#d9d9d9;
+}
+
+.tab_panel {
+    padding:5px 3px;
+}
+
+.tab_panel input, .tab_panel select {
+    border:1px solid #828282;
+    width:158px;
+}
+
+.tab_panel .image_border_color_panel input {
+    width:133px;
+}
+
+.tab_panel .image_border_color_button {
+    background:url(../img/icons.jpg) -40px 0px;
+}
+
+.tab_panel_spaceing {
+    padding:5px 3px;
+}
+
+.tab_panel_spaceing .headline {
+    font-weight:bold;
+    display:block;
+    height:25px;
+}
+
+.tab_panel_spaceing .margin_inner_panel,
+.tab_panel_spaceing .padding_inner_panel  {
+    padding:0 10px;
+}
+
+.tab_panel_spaceing .margin_inner_panel   input, 
+.tab_panel_spaceing .padding_inner_panel input {
+    width:74px;
+    border:1px solid #828282;
+}
+
+.tab_panel_spaceing .margin_inner_panel   span, 
+.tab_panel_spaceing .padding_inner_panel span {
+    text-align:right;
+    padding:0 10px 0 0;
+    font-size:0.9em;
+}
+
+
+/* ALLGEMEINE EINSTELLUNGEN 
+==========================================================*/
+.dragged {
+    opacity:0.5;
+    /* filter:alpha(opacity=50); */
+}
+
+/* Scrollbalken
+========================================================*/
+.verticalScrollbar {
+    background:#ddd;
+    position:relative;
+}
+
+.horizontalScrollbar {
+    background:#ddd;
+    position:relative;
+}
+
+.slider_track {
+    background:#696969;
+    position:relative;
+}
+
+.slider {
+    position:relative;
+}
+
+.slider.vertical {
+    background:url(../img/scroll_ruler.png) #696969 repeat-y;
+}
+
+.slider.horizontal{
+    background:url(../img/scroll_ruler_h.png) #696969 repeat-x;
+}
+
+.slider.horizontal .slider_inner {
+    background:url(../img/scroll_hori.png) no-repeat center center;
+    width:100%;
+    height:12px;
+}
+
+.slider.vertical .slider_inner {
+    background:url(../img/scroll_verti.png) no-repeat center center;
+    height:100%;
+}
+
+.scroll_up    { background:url(../img/scroll_up.png) #696969 no-repeat top left;    }
+.scroll_down  { background:url(../img/scroll_down.png) #696969 no-repeat top left;  }
+.scroll_left  { background:url(../img/scroll_left.png) #696969 no-repeat top left;  }
+.scroll_right { background:url(../img/scroll_right.png) #696969 no-repeat top left; }
+
+/*=========================================================
+* Fenster Icons | Buttons
+*========================================================*/
+.close_window , .maximize_window, .minimize_window,.collapse_window
+{ height:15px; width:15px; padding:5px 0 0; }
+
+.close_window     { background-position:-34px 2px; }
+.maximize_window  { background-position:-17px 2px; }
+.minimize_window  { background-position:-51px 2px; }
+.collapse_window  { background-position:0px 2px; }
+
+
+/*=========================================================
+* Hauptmenu Icons
+*========================================================*/
+.mainmenu {font-size:12px; line-height:19px; }
+.mainmenu .color { background-position:-383px 2px;    padding:0 0 0 20px; }
+.mainmenu .layer { background-position:-383px -18px;  padding:0 0 0 20px; }
+.mainmenu .image { background-position:-383px -104px; padding:0 0 0 20px; }
+.mainmenu .text  { background-position:-383px -103px; padding:0 0 0 20px; }
+
+/*=========================================================
+ *                    EBENEN EDITOR 
+ *=======================================================*/
+.layerEditor .layoutButton {
+    height:52px; width:52px; overflow:hidden; background:#D9D9D9;
+    line-height:70px; color:#4A4A4A; font-weight:bold; text-align: center;
+    outline:none;
+} 
+
+.layerEditor .active { background:#A4A4A4; color:#000; }
+
+.layerEditor .saveModifications { background-position: 0px -127px; background-repeat: repeat; text-align: center; line-height: 20px; }
+
+.layerEditor .gridLayoutEditor .button      { padding:3px 0 3px 25px; outline:none; }
+.layerEditor .gridLayoutEditor .addLayer    { background-position:-380px -40px; }
+.layerEditor .gridLayoutEditor .removeLayer { background-position:-380px -62px; }
+
+/*===========================================================
+* Image Editor Icons
+*==========================================================*/
+.imageEditor .color { background-position:-383px 2px; }
+
+/*===========================================================
+* Text Editor
+*==========================================================*/
+.enableEditMode { background-position: 0px -127px; text-align: center; font-weight:bold; line-height:18px; color:#000; }
+
+/*===========================================================
+* Hilfe Fenster
+*==========================================================*/
+.helpWindow {}
+.helpWindow a { color:#035aff; }
+.helpWindow ul { white-space:nowrap; }
+.helpWindow .helpContent { line-height:18px; }
+.helpWindow .helpContent p { margin:5px 0px; }
+.helpWindow .helpContent .footer { margin:10px 0 0; border:1px solid #dedede; border-width:1px 0 0; }
+.helpWindow .helpContent  ul { white-space:normal; width:430px }
+.helpWindow .helpContent .lFloat { float:left; width:300px; }
+.helpWindow .helpContent .desc     { width:130px; }
+
+/*===========================================================
+* Ebenen Übersicht
+*==========================================================*/
+.overview_toolpanel {
+    padding:3px 20px 2px 0px;
+    background:#b4b4b4 url(../img/overview_toolbar_background.png) repeat-x;
+}
+
+ul.layerview { 
+    font-family:Georgia; 
+    color:#484848;
+}
+
+ul.layerview li { 
+    line-height:20px;
+}
+
+ul.layerview li .opener { 
+    float:right; 
+    height:20px; 
+    width:17px;
+    background:url(../img/open_close.png) 0px 0px no-repeat; 
+}
+
+ul.layerview li { 
+    display:block;
+}
+
+ul.layerview li .open {
+    background-position:0px 0px;
+}
+
+ul.layerview li .closed {
+    background-position:0px -20px
+}
+
+ul.layerview li .spacer { 
+    float:left;
+    height:20px;
+    margin:0 3px 0 0;
+}
+
+ul.layerview li .firstFolderElement { 
+    background:url(../img/subfolder.png) top right no-repeat;
+}
+
+ul.layerview li .subFolder { 
+    font-weight:bold;
+}
+
+/*===========================================================
+* Ebenen Übersicht
+*==========================================================*/
+.export_view fieldset { border:1px solid #FFF; border-width:1px 0 0; padding:0 5px; }
+.export_view legend{ font-weight:bold; color:#4E4E4E; }
+.export_view label   { display:inline-block; width:280px; line-height:20px; }
+.export_view label.half   { width:140px; }
+.export_view label  span, .export_view label input  { float:left; }
+.export_view label  span  { width:120px; }
+
+.export_view input { margin:3px 0 0; }
+.export_view input.text { width:152px; }

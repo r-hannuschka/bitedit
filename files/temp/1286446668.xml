@@ -1,0 +1,74 @@
+<container type=' BitPanel'>
+	<attribute>
+		<layout type='BorderLayout'>
+		</layout>
+		<background color='#fff'>
+		</background>
+		<dimension width='940' height='1100'>
+		</dimension>
+	</attribute>
+	<contains>
+		<container type=' BitPanel' direction='NORTH'>
+			<attribute>
+				<layout type='FlowLayout'>
+				</layout>
+				<background color='#3D3D3D'>
+				</background>
+				<dimension width='940' height='225'>
+				</dimension>
+			</attribute>
+			<content>
+				<img src='http://creatability.com/rw_common/images/Creatability-Website-banner-V5.png'>
+				</img>
+			</content>
+		</container>
+		<container type=' BitPanel' direction='CENTER'>
+			<attribute>
+				<layout type='BorderLayout' hgap='1' vgap='1'>
+				</layout>
+				<background color='#ddd'>
+				</background>
+				<dimension width='940' height='875'>
+				</dimension>
+			</attribute>
+			<contains>
+				<container type=' BitPanel' direction='WEST'>
+					<attribute>
+						<layout type='FlowLayout'>
+						</layout>
+						<background color='#339900'>
+						</background>
+						<dimension width='200' height='875'>
+						</dimension>
+					</attribute>
+					<content>
+						<img src='http://127.0.0.1/BitEdit/files/bilder/bild1.jpg'>
+						</img>
+					</content>
+				</container>
+				<container type=' BitPanel' direction='CENTER'>
+					<attribute>
+						<layout type='FlowLayout'>
+						</layout>
+						<background color='#339900'>
+						</background>
+						<dimension width='739' height='875'>
+						</dimension>
+					</attribute>
+					<content>
+						<img src='http://127.0.0.1/BitEdit/files/bilder/bild2.jpg'>
+						</img>
+					<h2>
+					Die Wahl steht bevor
+					</h2>
+						<img src='http://www.afairjudgement.com/wp-content/uploads/2007/10/permafrost.jpg'>
+						</img>
+					<p>
+					das wird auf jeden Fall ein Knaller
+					</p>
+					</content>
+				</container>
+			</contains>
+		</container>
+	</contains>
+</container>

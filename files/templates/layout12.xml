@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<container type="BitPanel">
+    <attribute>
+        <layout type="BorderLayout" hgap="0" vgap="0" />
+        <style>
+            <size width="980" height="1000" />
+            <background color="#000" />
+        </style>
+    </attribute>
+    <contains>
+        <container type="panel" direction="center">
+            <attribute>
+                <style>
+                    <background color="#e4e4e4" />
+                </style>
+            </attribute>     
+        </container>
+        <container type="panel" direction="north">
+            <attribute>
+                <style>
+                    <size width="175" height="125" />
+                    <background color="#8f8f8f" />
+                </style>
+            </attribute>     
+        </container>
+        <container type="panel" direction="south">
+            <attribute>
+                <style>
+                    <size width="175" height="125" />
+                    <background color="#8f8f8f" />
+                </style>
+            </attribute>     
+        </container>
+        <container type="panel" direction="east">
+            <attribute>
+                <style>
+                    <size width="175" height="125" />
+                    <background color="#8f8f8f" />
+                </style>
+            </attribute>     
+        </container>
+        <container type="panel" direction="west">
+            <attribute>
+                <style>
+                    <size width="175" height="125" />
+                    <background color="#8f8f8f" />
+                </style>
+            </attribute>     
+        </container>
+    </contains>
+</container>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<container type="BitPanel" direction="WEST">
+    <attribute>
+        <layout type="GridLayout" rows="3" cols="1" hgap="0" vgap="0" />
+        <background color="#d3d3d3" />
+    </attribute>
+    <contains>
+        <container type="BitPanel">
+            <attribute>
+                <background color="#333" />
+            </attribute>
+        </container>
+        <container type="BitPanel">
+            <attribute>
+                <background color="#666" />
+            </attribute>
+        </container>                
+        <container type="BitPanel">
+            <attribute>
+                <background color="#999" />
+            </attribute>
+        </container>
+    </contains>
+</container>
+<container type="BitPanel" direction="CENTER">
+    <attribute>
+        <background color="#aaa" />
+    </attribute>
+</container>
